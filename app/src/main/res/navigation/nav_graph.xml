@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/plantListFragment">
+
+    <fragment
+        android:id="@+id/plantListFragment"
+        android:name="com.example.plantai2.PlantListFragment"
+        android:label="My Plants"
+        tools:layout="@layout/fragment_plant_list">
+        <action
+            android:id="@+id/action_plantListFragment_to_addPlantFragment"
+            app:destination="@id/addPlantFragment" />
+        <action
+            android:id="@+id/action_plantListFragment_to_plantDetailFragment"
+            app:destination="@id/plantDetailFragment">
+            <argument
+                android:name="plantId"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPlantFragment"
+        android:name="com.example.plantai2.AddPlantFragment"
+        android:label="Add New Plant"
+        tools:layout="@layout/fragment_add_plant" />
+
+    <fragment
+        android:id="@+id/plantDetailFragment"
+        android:name="com.example.plantai2.PlantDetailFragment"
+        android:label="Plant Details"
+        tools:layout="@layout/fragment_plant_detail">
+        <argument
+            android:name="plantId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_plantDetailFragment_to_growthLogFragment"
+            app:destination="@id/growthLogFragment">
+            <argument
+                android:name="plantId"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/growthLogFragment"
+        android:name="com.example.plantai2.GrowthLogFragment"
+        android:label="Log Growth"
+        tools:layout="@layout/fragment_growth_log">
+        <argument
+            android:name="plantId"
+            app:argType="long" />
+    </fragment>
+
+
+
+</navigation>
