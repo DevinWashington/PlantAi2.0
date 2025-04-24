@@ -1,52 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".PlantDetailFragment">
+    android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textViewPlantName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:text="Plant Name" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Growth Data:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/growthDataRecyclerView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Recommendations:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        android:orientation="vertical"
+        android:spacing="16dp">
 
-    <TextView
-        android:id="@+id/textViewRecommendations"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No recommendations yet." />
+        <TextView
+            android:id="@+id/textViewPlantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plant Details"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="bold"
+            android:textSize="22sp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabLogGrowth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@android:drawable/ic_menu_edit" />
+        <!-- Strain Type and Source -->
+        <TextView
+            android:id="@+id/textViewStrainType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strain Type: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/textViewStrainSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strain Source: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <!-- Plant Info -->
+        <TextView
+            android:id="@+id/textViewAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plant Age: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewHumidityLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity Level: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewTemperatureLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature Level: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewLightExposure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light Exposure: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewSoilType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soil Type: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <!-- Nutrients -->
+        <TextView
+            android:id="@+id/textViewNutrientBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nutrient Brand: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewNutrientFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nutrient Frequency: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <!-- Other Properties -->
+        <TextView
+            android:id="@+id/textViewPHLevels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pH Levels: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewWateringSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watering Schedule: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewLeafCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leaf Condition: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewPestSigns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pest Signs: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewDesiredYield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desired Yield: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewPreferredHarvestTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preferred Harvest Time: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewPreviousGrowthCycles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous Growth Cycles: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/textViewMethodChanges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Method Changes: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </LinearLayout>
+</ScrollView>

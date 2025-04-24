@@ -1,26 +1,183 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".AddPlantFragment">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Plant Name">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPlantName"
+        <!-- Plant Information -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plant Information"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/strainType"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:hint="Strain Type" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonSavePlant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save Plant" />
+        <EditText
+            android:id="@+id/strainSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Seed Source and Genetics" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/plantAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Plant Age and Growth Stage" />
+
+        <!-- Environmental Conditions -->
+
+        <EditText
+            android:id="@+id/plantHumidity"
+            android:layout_width="382dp"
+            android:layout_height="wrap_content"
+            android:hint="Humidity Level" />
+
+        <EditText
+            android:id="@+id/plantTemp"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:hint="Temperature Level" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Environmental Conditions"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/plantLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Light Exposure" />
+
+        <EditText
+            android:id="@+id/plantSoil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Soil Type" />
+
+        <EditText
+            android:id="@+id/plantPH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="pH Levels" />
+
+        <EditText
+            android:id="@+id/plantWater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Watering Schedule (&quot;X&quot;amount/Week/Day)" />
+
+        <!-- Nutrient Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nutrient Information"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/plantNutrients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Brand/Makeup of Nutrients" />
+
+        <EditText
+            android:id="@+id/plantNutrientFreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Frequency of Nutrient Application" />
+
+        <!-- Growth Metrics -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Growth Metrics"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/plantHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Plant Height" />
+
+        <EditText
+            android:id="@+id/plantLeaf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Leaf Color and Condition" />
+
+        <EditText
+            android:id="@+id/plantPest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Signs of Pests or Diseases" />
+
+        <!-- User Preferences -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Preferences"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/plantExpect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Desired Yield and Potency" />
+
+        <EditText
+            android:id="@+id/plantHarvest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preferred Harvest Time" />
+
+        <!-- Historical Data -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Historical Data"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/plantHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Previous Growth Cycles and Outcomes" />
+
+        <EditText
+            android:id="@+id/plantMethods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Changes in Methods or Conditions" />
+
+
+            <!-- Other UI elements go here -->
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+
+    </LinearLayout>
+</ScrollView>
